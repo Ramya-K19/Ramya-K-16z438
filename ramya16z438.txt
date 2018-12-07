@@ -1,0 +1,75 @@
+interface RainfallCalculator {
+  /**
+  * Captures rain occured in the given region
+  * @param measure amount of rainfall in centi meters
+  * @param rainDate date on which rainfall measure is recorded
+  * @param pincode identifies the location of rainfall where this was recorded
+  */
+  void captureRain(Float measure, Date rainDate, String pincode);
+  
+  
+  * Region which has gt maximum rainfall in the given . If more than 1 region got the same maximum, then return whichever has got the rain recently.
+  If both have got the rain on the same date, return whichever was captured first
+  */
+  RainfallRegion getRegionWithMaxRainfall(Date fromDate, Date toDate);
+  
+  /**
+  * Similar to above, but which region has got minimum rainfall
+  */
+  RainfallRegion getRegionWithMinRainfall(Date fromDate, Date toDate);
+  
+  /**
+  * Compute the average rainfall in the given date range and return the average
+  */
+  Float getAverageRainfall(Date fromDate, Date fromDate);
+}
+For the above problem assume that you have the following class defined. Feel free to create as many classes as you want to solve the above problem
+
+
+
+  
+  Float rain[];
+  int total;
+
+for(i=0;i<12;i++)
+{
+rain[i]=i+1;
+}
+int displaytotal()
+{
+ total=0;
+ for(i=0; i<12; i++)
+{
+total += rain[i];
+}
+printf("the total ",total);
+}
+int displayAvg(float rain[])
+{
+printf("The average , displayTotal(total)/12.0);
+}
+
+int displayHigh(float rain[])
+{
+high = rain[0];
+for(i=0; i<12; i++)
+{
+if(rain[i] > high)
+{
+high = rain[i];
+}
+}
+printf("the highest rainfall amount ",high);
+}
+int displaylow(float rain[])
+{
+low = rain[0];
+for(i=0; i<12; i++)
+{
+if(rain[i] < low)
+{
+low = rain[i];
+}
+}
+printf("the lowest rainfall amount ",low);
+}
